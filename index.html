@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>PubNub</title>
+  <title>KappaChat</title>
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=0">
 
   <!-- JQuery libraries -->
@@ -18,7 +18,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
   <!-- Pubnub libraries -->
-  <script src='http://cdn.pubnub.com/pubnub-3.4.min.js'></script>
+  <script src='https://cdn.pubnub.com/pubnub-3.7.10.min.js'></script>
   <!-- Script -->
   <script src='script.js'></script>
   <!-- Custom css -->
@@ -27,16 +27,18 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav id="header" class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">Kappa chat</a>
+        <img id="logo" src="bild.png" height="50">
         <p id="direction" class="navbar-text"></p>
+        <span id="user-number" class="navbar-text"></span>
+        <button id="change-chat-btn" class="btn">Local chat</button>
       </div>
     </div>
   </nav>
   <div class="container">
-    <div id="output" style="margin-top:10px"></div>
+    <div id="output"></div>
   </div>
   <div id="messaging" class="navbar navbar-default navbar-fixed-bottom">
     <input class="input-block-level" type="text" placeholder="Enter message here" id="input">

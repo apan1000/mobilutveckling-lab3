@@ -1,10 +1,170 @@
+html, body {
+	max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
-	padding-top: 45px;
+	padding-top: 60px;
 	padding-bottom: 55px;
 }
 
-#messaging {
+.navbar-default .navbar-brand {
+	color: #fff;
+}
+
+#header {
+	height: 65px;
 }
 
 #direction {
+	color: #fff;
+	position: absolute;
+	top: -10px;
+	left: 15px;
+	text-transform: uppercase;
+	font-size: 20pt;
 }
+
+#logo {
+	position: absolute;
+	top: 5px;
+	left: 50%;
+	-ms-transform: translate(-50%,0);
+   	-webkit-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+}
+
+#user-number {
+	color: #fff;
+	position: absolute;
+	top: 22px;
+	left: 15px;
+}
+
+#change-chat-btn {
+	color: #fff;
+	background: none;
+	border: 2px solid #fff;
+	position: absolute;
+	top: 12px;
+	right: 15px;
+}
+
+#output {
+	margin-top: 10px;
+}
+
+#messaging input {
+	/* Firefox */
+	width: -moz-calc(100% - 80px);
+	/* WebKit */
+	width: -webkit-calc(100% - 80px);
+	/* Opera */
+	width: -o-calc(100% - 80px);
+	/* Standard */
+	width: calc(100% - 80px);
+	margin-left: 5px;
+	margin-right: 0;
+	margin-top: 8px;
+	padding-left: 6px;
+	padding-right: 6px;
+	line-height: 1.8em;
+	border: 0;
+	border-bottom: 1px solid #333;
+}
+
+#messaging input:focus {
+	outline: none;
+}
+
+.bubble {
+	color: #fff;
+	margin-top: 7px;
+	border-radius: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	display: inline-block;
+	max-width: 80%
+}
+
+.my-bubble {
+	color: #333;
+	background: #ccc;
+	position: relative;
+	left: 100%;
+	-ms-transform: translate(-100%,0);
+   	-webkit-transform: translate(-100%,0);
+    transform: translate(-100%,0);
+}
+
+.slide-from-right {
+	-webkit-animation-name: slideFromRight;
+    -webkit-animation-duration: .7s;
+    animation-name: slideFromRight;
+    animation-duration: .7s;
+}
+
+.slide-from-left {
+	-webkit-animation-name: slideFromLeft;
+    -webkit-animation-duration: .7s;
+    animation-name: slideFromLeft;
+    animation-duration: .7s;
+}
+
+#send-btn {
+	color: #fff;
+	margin: 0;
+	margin-right: 5px;
+	margin-top: 3.5px;
+	float: right;
+	line-height: 2em;
+}
+
+.north {
+	background: #2f93e8;
+}
+
+.south {
+	background: #0ebd23;
+}
+
+.east {
+	background: #dd6544;
+}
+
+.west {
+	background: #de329b;
+}
+
+.local {
+	background: #000;
+}
+
+/* Slide from right animations */
+/* Chrome, Safari, Opera */
+@-webkit-keyframes slideFromRight {
+    0%   {-webkit-transform: translate(80%,0);}
+    100% {-webkit-transform: translate(-100%,0);}
+}
+
+/* Standard syntax */
+@keyframes slideFromRight {
+    0%   {transform: translate(80%,0);}
+    100% {transform: translate(-100%,0);}
+}
+
+/* Slide from left animations */
+/* Chrome, Safari, Opera */
+@-webkit-keyframes slideFromLeft {
+    0%   {-webkit-transform: translate(-80%,0);}
+    100% {-webkit-transform: translate(0,0);}
+}
+
+/* Standard syntax */
+@keyframes slideFromLeft {
+    0%   {transform: translate(-80%,0);}
+    100% {transform: translate(0,0);}
+}
+
